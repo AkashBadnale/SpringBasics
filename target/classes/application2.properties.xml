@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="subject1" class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg   value="Java"  index="1"></constructor-arg>
+      <constructor-arg  value="11"   index="0"></constructor-arg>
+   </bean>
+   
+   <bean id="subject2" class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg  index="0"  value="12"></constructor-arg>
+      <constructor-arg  index="1"  value="Python"></constructor-arg>
+   </bean>
+   
+   <bean id="student1" class="com.ab.DIusingProperty.Student" >
+      <constructor-arg  index="0"  value="1"></constructor-arg>
+      <constructor-arg  index="1"  value="AB"></constructor-arg>
+      <constructor-arg  index="2"  ref="subject1"></constructor-arg>
+   </bean>
+   
+   <bean id="student2" class="com.ab.DIusingProperty.Student" >
+      <constructor-arg  index="0"  value="2"></constructor-arg>
+      <constructor-arg  index="1"  value="NK"></constructor-arg>
+      <constructor-arg  index="2"  ref="subject2"></constructor-arg>
+   </bean>
+   
+   <!--  another  way  to specify   -->
+   <!-- <bean id="subject1" class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg  name="subjectId"  value="11"></constructor-arg>
+      <constructor-arg  name="subjectName"  value="Java"></constructor-arg>
+   </bean>
+   
+   <bean id="subject2" class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg  name="subjectId"  value="12"></constructor-arg>
+      <constructor-arg  name="subjectName"  value="Python"></constructor-arg>
+   </bean>
+   
+   <bean id="student1" class="com.ab.DIusingProperty.Student" >
+      <constructor-arg  name="id"  value="1"></constructor-arg>
+      <constructor-arg  name="name"  value="AB"></constructor-arg>
+      <constructor-arg  name="subject"  ref="subject1"></constructor-arg>
+   </bean>
+   
+   <bean id="student2" class="com.ab.DIusingProperty.Student" >
+      <constructor-arg  name="id"  value="2"></constructor-arg>
+      <constructor-arg  name="name"  value="NK"></constructor-arg>
+      <constructor-arg  name="subject"  ref="subject2"></constructor-arg>
+   </bean>
+    -->
+    <!--  another  way  to specify  -->
+    
+   <!--  <bean  id="subject1"  class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg   value="11"></constructor-arg>
+      <constructor-arg   value="Java"></constructor-arg>
+   </bean>
+   
+   <bean  id="subject2"  class="com.ab.DIusingProperty.Subject" >
+      <constructor-arg   value="12"></constructor-arg>
+      <constructor-arg   value="Python"></constructor-arg>
+   </bean>
+   
+   <bean  id="student1"  class="com.ab.DIusingProperty.Student" >
+      <constructor-arg   value="1"></constructor-arg>
+      <constructor-arg   value="AB"></constructor-arg>
+      <constructor-arg   ref="subject1"></constructor-arg>
+   </bean>
+   
+   <bean  id="student2"  class="com.ab.DIusingProperty.Student" >
+      <constructor-arg   value="2"></constructor-arg>
+      <constructor-arg   value="NK"></constructor-arg>
+      <constructor-arg  ref="subject2"></constructor-arg>
+   </bean>
+     -->
+   </beans>

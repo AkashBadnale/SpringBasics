@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="subject1" class="com.ab.DIusingProperty.Subject" >
+      <property name="subjectId" value="124" />
+      <property name="subjectName" value="Mathematics" />
+   </bean>
+   
+   <bean id="subject2" class="com.ab.DIusingProperty.Subject" >
+      <property name="subjectId" value="128" />
+      <property name="subjectName" value="Physics" />
+   </bean>
+
+  <bean id="student1" class="com.ab.DIusingProperty.Student" >
+      <property name="id" value="20120303" />
+      <property name="name" value="AB" />
+      <property name="subject"  ref="subject1" />
+   </bean>
+   
+   <bean id="student2" class="com.ab.DIusingProperty.Student" >
+      <property name="id" value="20120306" />
+      <property name="name" value="PA" />
+      <property name="subject"  ref="subject2" />
+   </bean>
+   
+   </beans>

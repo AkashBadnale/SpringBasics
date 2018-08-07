@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="address" class="com.ab.springDesktopApp.Address">
+      <property name="area" value="Karve Nagar" />
+      <property name="city" value="Pune" />
+   </bean>
+
+  <bean id="user" class="com.ab.springDesktopApp.User">
+      <property name="userName" value="AKASH" />
+      <property name="userSurname" value="BADNALE" />
+      <property name="userAddress"  ref="address" />
+   </bean>
+   
+</beans>
